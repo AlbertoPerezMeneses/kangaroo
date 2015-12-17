@@ -1,0 +1,214 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+</head>
+
+<body style="margin: 0;">
+
+<div id="jpedal" style="overflow: hidden; position:relative; width: 2933px; height: 1650px;">
+
+<!-- Begin shared CSS values -->
+<style type="text/css" >
+.t {
+	position: absolute;
+	-webkit-transform-origin: top left;
+	-moz-transform-origin: top left;
+	-o-transform-origin: top left;
+	-ms-transform-origin: top left;
+	-webkit-transform: scale(0.25);
+	-moz-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+</style>
+<!-- End shared CSS values -->
+
+<!-- Begin shared JS -->
+<script type="text/javascript">
+
+// Ensure that we're not replacing any onload events
+function addLoadEvent(func) {
+	var oldonload = window.onload;
+	if (typeof window.onload != 'function') {
+		window.onload = func;
+	} else {
+		window.onload = function() {
+			if (oldonload) {
+				oldonload();
+			}
+			func();
+		}
+	}
+}
+addLoadEvent(function(){load24();});
+
+function adjustWordSpacing(widths) {
+    var i, allLinesDone = false;
+    var isDone = [];
+    var currentSpacing = [];
+    var elements = [];
+    
+    // Initialise arrays
+    for (i = 0; i < widths.length; i++) {
+        elements[i] = document.getElementById(widths[i][0]);
+        elements[i].style.wordSpacing = '0px';//Required if rerunning
+    }
+    for (i = 0; i < widths.length; i++) {
+        if (isIE) widths[i][1] = widths[i][1] * 4;
+        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
+        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
+        isDone[i] = false;
+    }
+    
+    while (!allLinesDone) {
+        // Add each adjustment to the render queue without forcing a render
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i]) {
+                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
+            }            
+        }
+        
+        allLinesDone = true;
+        // If elements still need to be wider, add 1 to the word spacing
+        for (i = 0; i < widths.length; i++) {
+            if (!isDone[i] && currentSpacing[i] < 160) {
+                if (elements[i].offsetWidth >= widths[i][1]) {
+                    isDone[i] = true;
+                } else {
+                    currentSpacing[i]++;
+                    allLinesDone = false;
+                }
+            }
+        }
+    }
+    
+    for (i = 0; i < widths.length; i++) {
+        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
+    }
+}
+
+</script>
+<!-- End shared JS -->
+
+
+<!-- Begin inline CSS -->
+<style type="text/css" >
+
+#t1_24{left:73px;top:489px;}
+#t2_24{left:156px;top:671px;}
+#t3_24{left:211px;top:674px;letter-spacing:-1px;}
+#t4_24{left:156px;top:1218px;}
+#t5_24{left:211px;top:1220px;}
+#t6_24{left:211px;top:1297px;}
+#t7_24{left:159px;top:765px;}
+#t8_24{left:214px;top:768px;}
+#t9_24{left:159px;top:851px;}
+#ta_24{left:214px;top:853px;}
+#tb_24{left:160px;top:936px;}
+#tc_24{left:214px;top:938px;}
+#td_24{left:156px;top:1032px;}
+#te_24{left:211px;top:1034px;}
+#tf_24{left:160px;top:1315px;}
+#tg_24{left:214px;top:1318px;}
+#th_24{left:159px;top:1119px;}
+#ti_24{left:214px;top:1121px;}
+
+.s2_24{
+	FONT-SIZE: 195px;
+	FONT-FAMILY: EAAAAA-LiberationSans24;
+	color: rgb(128,128,128);
+}
+
+.s1_24{
+	FONT-SIZE: 268px;
+	FONT-FAMILY: BAAAAA-DejaVuSans24;
+	color: rgb(49,133,156);
+}
+
+.s3_24{
+	FONT-SIZE: 195px;
+	FONT-FAMILY: BAAAAA-DejaVuSans24;
+	color: rgb(128,128,128);
+}
+
+</style>
+<!-- End inline CSS -->
+
+<!-- Begin embedded font definitions -->
+<style id="fonts24" type="text/css" >
+
+@font-face {
+	font-family: EAAAAA-LiberationSans24;
+	src :url("24/fonts/EAAAAA-LiberationSans.woff") format("woff");
+}
+
+@font-face {
+	font-family: BAAAAA-DejaVuSans24;
+	src :url("24/fonts/BAAAAA-DejaVuSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1_24" class="t s1_24">Corporativo</div>
+<div id="t2_24" class="t s2_24">•</div>
+<div id="t3_24" class="t s3_24">Wifi</div>
+<div id="t4_24" class="t s2_24">•</div>
+<div id="t5_24" class="t s3_24">Control de </div>
+<div id="t6_24" class="t s3_24">accesos</div>
+<div id="t7_24" class="t s2_24">•</div>
+<div id="t8_24" class="t s3_24">Soluciones IP</div>
+<div id="t9_24" class="t s2_24">•</div>
+<div id="ta_24" class="t s3_24">Apps</div>
+<div id="tb_24" class="t s2_24">•</div>
+<div id="tc_24" class="t s3_24">Sistema SAAS</div>
+<div id="td_24" class="t s2_24">•</div>
+<div id="te_24" class="t s3_24">Servidores</div>
+<div id="tf_24" class="t s2_24">•</div>
+<div id="tg_24" class="t s3_24">Cámaras</div>
+<div id="th_24" class="t s2_24">•</div>
+<div id="ti_24" class="t s3_24">Biométricos</div>
+
+<!-- End text definitions -->
+
+<!-- Begin page background -->
+<div id="pg24Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
+<div id="pg24"><object width="2933" height="1650" data="24/24.svg" type="image/svg+xml" id="pdf24" style="width:2933px; height:1650px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
+<!-- End page background -->
+
+<!-- Begin page loading JS -->
+<script id="ld24" type="text/javascript">
+
+var isIE = false;
+var f24 = [['t5_24',1014],['t8_24',1287],['tc_24',1374]];
+function load24(){
+	var timeout = 100;
+	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
+	setTimeout(function() {adjustWordSpacing(f24);},timeout);
+}
+</script>
+<!--[if lt IE 9]><script type="text/javascript">
+isIE = true;
+
+var divCount = 19;
+for (var i = 1; i < divCount; i++) {
+    var div = document.getElementById("t" + i.toString(36) + "_24");
+    if (div !== null) {
+        div.style.top = (div.offsetTop * 4) + "px";
+        div.style.left = (div.offsetLeft * 4) + "px";
+        div.style.zoom = "25%";
+    }
+}
+</script><![endif]-->
+<!-- End page loading JS -->
+
+</div>
+</body>
+</html>
