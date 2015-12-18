@@ -3,60 +3,33 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <meta charset="utf-8" />
+<link href="assets/css/animate.css" rel="stylesheet"/>
+<link href="assets/css/particles.css" rel="stylesheet"/>
 </head>
 
-<body style="margin: 0;">
+<body>
+    <div id="particles-js" ></div> <!-- stats - count particles --> 
+    <div class="count-particles" style="display: none;"> <span class="js-count-particles" >--</span> particles </div> 
+    
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+    <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    
+    <script src="./assets/jquery-1.11.2.min.js"></script>
+    <script src="./assets/js/jquery.backstretch.min.js"></script>
+    <script src="./assets/js/jquery.lazyload.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/jquery.parallax.js"></script>
+    
+    <script>
+          $.backstretch("./2/img/1.png");
+          $(document).ready(function(){
+              $("#mb,#ms,#fps").hide(0);
+          })
+    </script>
 
-<div id="jpedal" style="overflow: hidden; position:relative; width: 2933px; height: 1650px;">
-<!-- Begin shared JS -->
-<script type="text/javascript">
-
-// Ensure that we're not replacing any onload events
-function addLoadEvent(func) {
-	var oldonload = window.onload;
-	if (typeof window.onload != 'function') {
-		window.onload = func;
-	} else {
-		window.onload = function() {
-			if (oldonload) {
-				oldonload();
-			}
-			func();
-		}
-	}
-}
-addLoadEvent(function(){load2();});
-
-</script>
-<!-- End shared JS -->
-
-<!-- Begin page background -->
-<div id="pg2Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
-<div id="pg2"><object width="2933" height="1650" data="2/2.svg" type="image/svg+xml" id="pdf2" style="width:2933px; height:1650px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
-<!-- End page background -->
-
-<!-- Begin page loading JS -->
-<script id="ld2" type="text/javascript">
-
-var isIE = false;
-function load2(){
-}
-</script>
-<!--[if lt IE 9]><script type="text/javascript">
-isIE = true;
-
-var divCount = 1;
-for (var i = 1; i < divCount; i++) {
-    var div = document.getElementById("t" + i.toString(36) + "_2");
-    if (div !== null) {
-        div.style.top = (div.offsetTop * 4) + "px";
-        div.style.left = (div.offsetLeft * 4) + "px";
-        div.style.zoom = "25%";
-    }
-}
-</script><![endif]-->
-<!-- End page loading JS -->
-
-</div>
+    <script type="text/javascript">
+     particlesJS("particles-js", {"particles":{"number":{"value":33,"density":{"enable":true,"value_area":800}},"color":{"value":"#519bcf"},"shape":{"type":"edge","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":2,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":false});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;   
+    </script>
+    
 </body>
 </html>

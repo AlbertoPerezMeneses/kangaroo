@@ -5,136 +5,39 @@
 <meta charset="utf-8" />
 </head>
 
-<body style="margin: 0;">
-
-<div id="jpedal" style="overflow: hidden; position:relative; width: 2933px; height: 1650px;">
-
-<!-- Begin shared CSS values -->
+<body>
 <style type="text/css" >
 .t {
-	position: absolute;
-	-webkit-transform-origin: top left;
-	-moz-transform-origin: top left;
-	-o-transform-origin: top left;
-	-ms-transform-origin: top left;
-	-webkit-transform: scale(0.25);
-	-moz-transform: scale(0.25);
-	-o-transform: scale(0.25);
-	-ms-transform: scale(0.25);
+	position: absolute;	
 	z-index: 2;
 	position:absolute;
 	white-space:nowrap;
 	overflow:visible;
 }
-</style>
-<!-- End shared CSS values -->
+#t1{left:10%;top:58%;letter-spacing:-3px;}
+#t2{left:10%;top:60%;}
+#t3{left:10%;top:63%;}
+#t4{left:10%;top:66%;}
+#t5{left:10%;top:69%;}
 
-<!-- Begin shared JS -->
-<script type="text/javascript">
-
-// Ensure that we're not replacing any onload events
-function addLoadEvent(func) {
-	var oldonload = window.onload;
-	if (typeof window.onload != 'function') {
-		window.onload = func;
-	} else {
-		window.onload = function() {
-			if (oldonload) {
-				oldonload();
-			}
-			func();
-		}
-	}
-}
-addLoadEvent(function(){load7();});
-
-function adjustWordSpacing(widths) {
-    var i, allLinesDone = false;
-    var isDone = [];
-    var currentSpacing = [];
-    var elements = [];
-    
-    // Initialise arrays
-    for (i = 0; i < widths.length; i++) {
-        elements[i] = document.getElementById(widths[i][0]);
-        elements[i].style.wordSpacing = '0px';//Required if rerunning
-    }
-    for (i = 0; i < widths.length; i++) {
-        if (isIE) widths[i][1] = widths[i][1] * 4;
-        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
-        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
-        isDone[i] = false;
-    }
-    
-    while (!allLinesDone) {
-        // Add each adjustment to the render queue without forcing a render
-        for (i = 0; i < widths.length; i++) {
-            if (!isDone[i]) {
-                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
-            }            
-        }
-        
-        allLinesDone = true;
-        // If elements still need to be wider, add 1 to the word spacing
-        for (i = 0; i < widths.length; i++) {
-            if (!isDone[i] && currentSpacing[i] < 160) {
-                if (elements[i].offsetWidth >= widths[i][1]) {
-                    isDone[i] = true;
-                } else {
-                    currentSpacing[i]++;
-                    allLinesDone = false;
-                }
-            }
-        }
-    }
-    
-    for (i = 0; i < widths.length; i++) {
-        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
-    }
-}
-
-</script>
-<!-- End shared JS -->
-
-
-<!-- Begin inline CSS -->
-<style type="text/css" >
-
-#t1_7{left:106px;top:832px;letter-spacing:-3px;}
-#t2_7{left:156px;top:1014px;}
-#t3_7{left:211px;top:1017px;}
-#t4_7{left:211px;top:1093px;}
-#t5_7{left:159px;top:1119px;}
-#t6_7{left:214px;top:1121px;letter-spacing:-1px;}
-#t7_7{left:156px;top:1218px;}
-#t8_7{left:211px;top:1220px;}
-#t9_7{left:211px;top:1297px;}
-#ta_7{left:85px;top:1320px;}
-#tb_7{left:140px;top:1322px;}
 
 .s2_7{
-	FONT-SIZE: 195px;
+	FONT-SIZE: 25px;
 	FONT-FAMILY: EAAAAA-LiberationSans7;
 	color: rgb(128,128,128);
 }
 
 .s1_7{
-	FONT-SIZE: 268px;
+	FONT-SIZE: 25px;
 	FONT-FAMILY: BAAAAA-DejaVuSans7;
 	color: rgb(49,133,156);
 }
 
 .s3_7{
-	FONT-SIZE: 195px;
+	FONT-SIZE: 25px;
 	FONT-FAMILY: BAAAAA-DejaVuSans7;
 	color: rgb(128,128,128);
 }
-
-</style>
-<!-- End inline CSS -->
-
-<!-- Begin embedded font definitions -->
-<style id="fonts7" type="text/css" >
 
 @font-face {
 	font-family: EAAAAA-LiberationSans7;
@@ -150,51 +53,21 @@ function adjustWordSpacing(widths) {
 <!-- End embedded font definitions -->
 
 <!-- Begin text definitions (Positioned/styled in CSS) -->
-<div id="t1_7" class="t s1_7">Transporte</div>
-<div id="t2_7" class="t s2_7">•</div>
-<div id="t3_7" class="t s3_7">Administración de </div>
-<div id="t4_7" class="t s3_7">flotillas</div>
-<div id="t5_7" class="t s2_7">•</div>
-<div id="t6_7" class="t s3_7">Wifi</div>
-<div id="t7_7" class="t s2_7">•</div>
-<div id="t8_7" class="t s3_7">Inhibidor de </div>
-<div id="t9_7" class="t s3_7">señal</div>
-<div id="ta_7" class="t s2_7">•</div>
-<div id="tb_7" class="t s3_7">Cámaras de seguridad</div>
+<div id="t1" class="t s1_7">Transporte</div>
+<div id="t2" class="t s3_7">•Administración de flotillas</div>
+<div id="t3" class="t s3_7">•Wifi</div>
+<div id="t4" class="t s3_7">•Inhibidor de señal</div>
+<div id="t5" class="t s3_7">•Cámaras de seguridad</div>
 
-<!-- End text definitions -->
+  <script src="./assets/jquery-1.11.2.min.js"></script>
+    <script src="./assets/js/jquery.backstretch.min.js"></script>
+    <script src="./assets/js/jquery.lazyload.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    
+    <script>
+          $.backstretch("./7/img/1.png");
+    </script>
 
-<!-- Begin page background -->
-<div id="pg7Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
-<div id="pg7"><object width="2933" height="1650" data="7/7.svg" type="image/svg+xml" id="pdf7" style="width:2933px; height:1650px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
-<!-- End page background -->
 
-<!-- Begin page loading JS -->
-<script id="ld7" type="text/javascript">
-
-var isIE = false;
-var f7 = [['t3_7',1768],['t8_7',1170],['tb_7',2210]];
-function load7(){
-	var timeout = 100;
-	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
-	setTimeout(function() {adjustWordSpacing(f7);},timeout);
-}
-</script>
-<!--[if lt IE 9]><script type="text/javascript">
-isIE = true;
-
-var divCount = 12;
-for (var i = 1; i < divCount; i++) {
-    var div = document.getElementById("t" + i.toString(36) + "_7");
-    if (div !== null) {
-        div.style.top = (div.offsetTop * 4) + "px";
-        div.style.left = (div.offsetLeft * 4) + "px";
-        div.style.zoom = "25%";
-    }
-}
-</script><![endif]-->
-<!-- End page loading JS -->
-
-</div>
 </body>
 </html>

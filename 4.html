@@ -5,149 +5,60 @@
 <meta charset="utf-8" />
 </head>
 
-<body style="margin: 0;">
-
-<div id="jpedal" style="overflow: hidden; position:relative; width: 2933px; height: 1650px;">
+<body>
 
 <!-- Begin shared CSS values -->
 <style type="text/css" >
 .t {
-	position: absolute;
-	-webkit-transform-origin: top left;
-	-moz-transform-origin: top left;
-	-o-transform-origin: top left;
-	-ms-transform-origin: top left;
-	-webkit-transform: scale(0.25);
-	-moz-transform: scale(0.25);
-	-o-transform: scale(0.25);
-	-ms-transform: scale(0.25);
+	position: absolute;	
 	z-index: 2;
 	position:absolute;
 	white-space:nowrap;
 	overflow:visible;
 }
-</style>
-<!-- End shared CSS values -->
 
-<!-- Begin shared JS -->
-<script type="text/javascript">
-
-// Ensure that we're not replacing any onload events
-function addLoadEvent(func) {
-	var oldonload = window.onload;
-	if (typeof window.onload != 'function') {
-		window.onload = func;
-	} else {
-		window.onload = function() {
-			if (oldonload) {
-				oldonload();
-			}
-			func();
-		}
-	}
-}
-addLoadEvent(function(){load4();});
-
-function adjustWordSpacing(widths) {
-    var i, allLinesDone = false;
-    var isDone = [];
-    var currentSpacing = [];
-    var elements = [];
-    
-    // Initialise arrays
-    for (i = 0; i < widths.length; i++) {
-        elements[i] = document.getElementById(widths[i][0]);
-        elements[i].style.wordSpacing = '0px';//Required if rerunning
-    }
-    for (i = 0; i < widths.length; i++) {
-        if (isIE) widths[i][1] = widths[i][1] * 4;
-        currentSpacing[i] = Math.floor((widths[i][1] - elements[i].offsetWidth) / elements[i].innerHTML.match(/\s.|&nbsp;./g).length);//min
-        if (isIE) currentSpacing[i] = Math.floor(currentSpacing[i] / 4);
-        isDone[i] = false;
-    }
-    
-    while (!allLinesDone) {
-        // Add each adjustment to the render queue without forcing a render
-        for (i = 0; i < widths.length; i++) {
-            if (!isDone[i]) {
-                elements[i].style.wordSpacing = currentSpacing[i] + 'px';
-            }            
-        }
-        
-        allLinesDone = true;
-        // If elements still need to be wider, add 1 to the word spacing
-        for (i = 0; i < widths.length; i++) {
-            if (!isDone[i] && currentSpacing[i] < 160) {
-                if (elements[i].offsetWidth >= widths[i][1]) {
-                    isDone[i] = true;
-                } else {
-                    currentSpacing[i]++;
-                    allLinesDone = false;
-                }
-            }
-        }
-    }
-    
-    for (i = 0; i < widths.length; i++) {
-        elements[i].style.wordSpacing = (currentSpacing[i] - 1) + 'px';
-    }
-}
-
-</script>
-<!-- End shared JS -->
-
-
-<!-- Begin inline CSS -->
-<style type="text/css" >
-
-#t1_4{left:207px;top:183px;}
-#t2_4{left:950px;top:488px;}
-#t3_4{left:950px;top:554px;}
-#t4_4{left:950px;top:620px;}
-#t5_4{left:950px;top:818px;letter-spacing:-4px;}
-#t6_4{left:950px;top:884px;}
-#t7_4{left:1299px;top:884px;}
-#t8_4{left:1434px;top:884px;}
-#t9_4{left:950px;top:950px;}
-#ta_4{left:950px;top:1148px;}
-#tb_4{left:950px;top:1214px;}
-#tc_4{left:950px;top:1280px;letter-spacing:-4px;}
+#t1_4{left:10%;top:10%;}
+#t2_4{left:40%;top:30%;}
+#t3_4{left:40%;top:35%;}
+#t4_4{left:40%;top:40%;}
+#t5_4{left:40%;top:45%;letter-spacing:-4px;}
+#t6_4{left:40%;top:50%;}
+#t7_4{left:40%;top:55%;}
+#t8_4{left:40%;top:55%;}
+#t9_4{left:40%;top:60%;}
+#ta_4{left:40%;top:60%;}
+#tb_4{left:40%;top:65%;}
+#tc_4{left:40%;top:70%;letter-spacing:-4px;}
 
 .s1_4{
-	FONT-SIZE: 244px;
+	FONT-SIZE: 25px;
 	FONT-FAMILY: BAAAAA-DejaVuSans4;
 	color: rgb(49,133,156);
 }
 
 .s5_4{
-	FONT-SIZE: 220px;
+	FONT-SIZE: 25px;
 	FONT-FAMILY: BAAAAA-DejaVuSans4;
 	color: rgb(128,128,128);
 }
 
 .s4_4{
-	FONT-SIZE: 220px;
+	FONT-SIZE: 25px;
 	FONT-FAMILY: DAAAAA-DejaVuSans-Oblique4;
 	color: rgb(127,127,127);
 }
 
 .s3_4{
-	FONT-SIZE: 220px;
+	FONT-SIZE: 25px;
 	FONT-FAMILY: BAAAAA-DejaVuSans4;
 	color: rgb(127,127,127);
 }
 
 .s2_4{
-	FONT-SIZE: 220px;
+	FONT-SIZE: 25px;
 	FONT-FAMILY: CAAAAA-DejaVuSans-Bold4;
 	color: rgb(49,133,156);
 }
-
-</style>
-<!-- End inline CSS -->
-
-<!-- Begin embedded font definitions -->
-<style id="fonts4" type="text/css" >
 
 @font-face {
 	font-family: CAAAAA-DejaVuSans-Bold4;
@@ -173,47 +84,22 @@ function adjustWordSpacing(widths) {
 <div id="t3_4" class="t s3_4">Optimización de recurso humano y </div>
 <div id="t4_4" class="t s3_4">tecnológico reflejado en ahorros.</div>
 <div id="t5_4" class="t s2_4">Talento</div>
-<div id="t6_4" class="t s3_4">Acceso a un </div>
-<div id="t7_4" class="t s4_4">pool</div>
-<div id="t8_4" class="t s3_4">de expertos en </div>
-<div id="t9_4" class="t s3_4">distintas tecnologías.</div>
+<div id="t6_4" class="t s3_4">Acceso a un pool de expertos</div>
+<div id="t8_4" class="t s3_4">en distintas tecnologías. </div>
 <div id="ta_4" class="t s2_4">Sinergia</div>
 <div id="tb_4" class="t s5_4">Integración con el equipo existente </div>
 <div id="tc_4" class="t s5_4">de IT.</div>
 
-<!-- End text definitions -->
 
-<!-- Begin page background -->
-<div id="pg4Overlay" style="width:100%; height:100%; position:absolute; z-index:1; background-color:rgba(0,0,0,0); -webkit-user-select: none;"></div>
-<div id="pg4"><object width="2933" height="1650" data="4/4.svg" type="image/svg+xml" id="pdf4" style="width:2933px; height:1650px; background-color:white; -moz-transform:scale(1); z-index: 0;"></object></div>
-<!-- End page background -->
+<script src="./assets/jquery-1.11.2.min.js"></script>
+    <script src="./assets/js/jquery.backstretch.min.js"></script>
+    <script src="./assets/js/jquery.lazyload.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    
+    <script>
+          $.backstretch("./3/img/1.png");
+    </script>
 
-<!-- Begin page loading JS -->
-<script id="ld4" type="text/javascript">
 
-var isIE = false;
-var f4 = [['t3_4',3844],['t4_4',3616],['t6_4',1325],['t8_4',1651],['t9_4',2335],['tb_4',3882],['tc_4',586]];
-function load4(){
-	var timeout = 100;
-	if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) timeout = 500;
-	setTimeout(function() {adjustWordSpacing(f4);},timeout);
-}
-</script>
-<!--[if lt IE 9]><script type="text/javascript">
-isIE = true;
-
-var divCount = 13;
-for (var i = 1; i < divCount; i++) {
-    var div = document.getElementById("t" + i.toString(36) + "_4");
-    if (div !== null) {
-        div.style.top = (div.offsetTop * 4) + "px";
-        div.style.left = (div.offsetLeft * 4) + "px";
-        div.style.zoom = "25%";
-    }
-}
-</script><![endif]-->
-<!-- End page loading JS -->
-
-</div>
 </body>
 </html>
