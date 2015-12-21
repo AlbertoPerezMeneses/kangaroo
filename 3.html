@@ -56,10 +56,15 @@
     <script src="./assets/js/jquery.backstretch.min.js"></script>
     <script src="./assets/js/jquery.lazyload.min.js"></script>
     <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/keyUp.js"></script>
     
     <script>
-          $.backstretch("./3/img/1.png");
-          new WOW().init();                    
+          $.backstretch(["./3/img/1.png"],{duration: 3000,fade:750});
+          new WOW().init();     
+          
+          $(document).ready(function(){             
+              setUriPosition(1);
+          });
     </script>
 
 </body>

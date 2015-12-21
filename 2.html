@@ -19,12 +19,15 @@
     <script src="./assets/js/jquery.lazyload.min.js"></script>
     <script src="./assets/js/wow.min.js"></script>
     <script src="./assets/js/jquery.parallax.js"></script>
+    <script src="./assets/js/keyUp.js"></script>
     
     <script>
-          $.backstretch("./2/img/1.png");
+         
+          $.backstretch(["./2/img/1.png"],{duration: 3000,fade:750});
           $(document).ready(function(){
               $("#mb,#ms,#fps").hide(0);
-          })
+              setUriPosition(0);
+          });
     </script>
 
     <script type="text/javascript">

@@ -40,9 +40,14 @@
     <script src="./assets/js/jquery.backstretch.min.js"></script>
     <script src="./assets/js/jquery.lazyload.min.js"></script>
     <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/keyUp.js"></script>
     
     <script>
-          $.backstretch("./6/img/1.png");
+          $.backstretch(["./6/img/1.png"],{duration: 3000,fade:750});
+          
+          $(document).ready(function(){             
+              setUriPosition(4);
+          });
     </script>
 
 

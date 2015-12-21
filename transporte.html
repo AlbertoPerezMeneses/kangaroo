@@ -1,0 +1,98 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="utf-8" />
+<link href="assets/css/animate.css" rel="stylesheet"/>
+</head>
+
+<body >
+<style type="text/css" >
+.t {
+	position: absolute;	
+	z-index: 2;
+	position:absolute;
+	white-space:nowrap;
+	overflow:visible;
+}
+#t1{left:10%;top:58%;letter-spacing:-3px;}
+#t2{left:10%;top:60%;}
+#t3{left:10%;top:63%;}
+#t4{left:10%;top:66%;}
+#t5{left:10%;top:69%;}
+
+
+.s2_7{
+	FONT-SIZE: 25px;
+	FONT-FAMILY: EAAAAA-LiberationSans7;
+	color: rgb(128,128,128);
+}
+
+.s1_7{
+	FONT-SIZE: 25px;
+	FONT-FAMILY: BAAAAA-DejaVuSans7;
+	color: rgb(49,133,156);
+}
+
+.s3_7{
+	FONT-SIZE: 25px;
+	FONT-FAMILY: BAAAAA-DejaVuSans7;
+	color: rgb(128,128,128);
+}
+
+@font-face {
+	font-family: EAAAAA-LiberationSans7;
+	src :url("7/fonts/EAAAAA-LiberationSans.woff") format("woff");
+}
+
+@font-face {
+	font-family: BAAAAA-DejaVuSans7;
+	src :url("7/fonts/BAAAAA-DejaVuSans.woff") format("woff");
+}
+
+</style>
+<!-- End embedded font definitions -->
+
+<!-- Begin text definitions (Positioned/styled in CSS) -->
+<div id="t1" class="t s1_7 wow fadeIn"  data-wow-duration="2s" data-wow-delay="0.5s">Transporte</div>
+<div id="t2" class="t s3_7 wow fadeIn"  data-wow-duration="2s" data-wow-delay="1.5s">•Administración de flotillas</div>
+<div id="t3" class="t s3_7 wow fadeIn"  data-wow-duration="2s" data-wow-delay="2.5s">•Wifi</div>
+<div id="t4" class="t s3_7 wow fadeIn"  data-wow-duration="2s" data-wow-delay="3.5s">•Inhibidor de señal</div>
+<div id="t5" class="t s3_7 wow fadeIn"  data-wow-duration="2s" data-wow-delay="4.5s">•Cámaras de seguridad</div>
+
+  
+    <script src="./assets/jquery-1.11.2.min.js"></script>
+    <script src="./assets/js/jquery.backstretch.min.js"></script>
+    <script src="./assets/js/jquery.lazyload.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/keyUp.js"></script>
+    
+    <script>
+          $.backstretch(["./7/img/1.png"],{duration: 3000,fade:750});
+          //
+           new WOW().init();     
+          
+          $(document).ready(function(){             
+              setUriPosition(5);
+          });
+           $("#t1").click(function(){
+              $.backstretch("./7/img/1.png");
+          });
+          $("#t2").click(function(){
+              $.backstretch("./8/img/1.png");
+          });
+          $("#t3").click(function(){
+              $.backstretch("./9/img/1.png");
+          });
+          $("#t4").click(function(){
+              $.backstretch("./10/img/1.png");
+          });
+          $("#t5").click(function(){
+              $.backstretch("./11/img/1.png");
+          });
+         
+          
+    </script>
+
+
+</body>
